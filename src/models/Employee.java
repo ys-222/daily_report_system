@@ -25,6 +25,10 @@ import javax.persistence.Table;
     // 従業員がログインするときの社員番号とパスワードが正しいかをチェックする
     @NamedQuery(
             name = "checkRegisteredCode",
+            query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
+    ),
+    @NamedQuery(
+            name = "checkLoginCodeAndePassword",
             query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
     )
 })
