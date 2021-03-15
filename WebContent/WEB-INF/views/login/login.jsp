@@ -8,7 +8,7 @@
             </div>
         </c:if>
         <c:if test="${flush != null}">
-            <div id="flush_error">
+            <div id="flush_success">
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
@@ -17,13 +17,13 @@
             <label for="code">社員番号</label><br />
             <input type="text" name="code" value="${code}" />
             <br /><br />
-            
+
             <label for="password">パスワード</label><br />
             <input type="password" name="password" />
             <br /><br />
-            
+
             <input type="hidden" name="_token" value="${_token}" />
             <button type="submit">ログイン</button>
-       </form>
+        </form>
     </c:param>
-    </c:import>
+</c:import>
